@@ -65,7 +65,7 @@ app.get('/buscar-producto/:id', (req, res) => {buscarProducto.handleBuscarProduc
 
 // Agregar
 app.use('/agregar-producto', upload.array('image'), async(req, res) => {
-    const uploader = async (path) => await cloudinary.uploads(path, 'FlagClub');
+    const uploader = async (path) => await cloudinary.uploads(path, 'SoldaduraMovil');
     let safeUrl = '';
     const insert = (str, index, value) => {
       safeUrl = str.substr(0, index) + value + str.substr(index);
@@ -116,7 +116,7 @@ app.patch('/modificar-producto/:id', (req, res) => {modificarProducto.handleModi
 
 //Modificar Imagen producto
 app.use('/modificar-imagen-producto/:id', upload.array('image'), async(req, res) => {
-    const uploader = async (path) => await cloudinary.uploads(path, 'FlagClub');
+    const uploader = async (path) => await cloudinary.uploads(path, 'SoldaduraMovil');
     let safeUrl = '';
     const insert = (str, index, value) => {
       safeUrl = str.substr(0, index) + value + str.substr(index);
